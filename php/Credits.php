@@ -25,8 +25,8 @@
 					<td>Ingenieria de Computadores</td>
 				</tr>
 				<tr>
-					<td><img class="autores" src="../autor-img/aimg-1.jpeg" alt="autor 1"></td>
-					<td><img class="autores" src="../autor-img/aimg-2.jpeg" alt="autor 2"></td>
+					<td><img class="autores" src="../images/autor-img/aimg-1.jpeg" alt="autor 1"></td>
+					<td><img class="autores" src="../images/autor-img/aimg-2.jpeg" alt="autor 2"></td>
 				</tr>
 				<tr>
 					<td>kandreev001@ikasle.ehu.es</td>
