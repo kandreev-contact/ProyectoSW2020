@@ -2,14 +2,47 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+  <script src="../js/ShowImageInForm.js"></script>
+  <style>
+		.table_QuestionForm{
+			margin: auto;
+		}
+		td {
+  			width: 25%;
+		}
+	</style>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
 
-      Añadir el formulario y los scripts necesarios para que el usuario <br>
-      pueda introducir los datos de una pregunta con una imagen relacionada con la misma.
+      	<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
+		<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’>-->
+		<form id='fquestion' name='fquestion' action='prueba.php'>
+			<table class="table_QuestionForm">
+				<tr><th><h2>Insertar pregunta</h2><br/></th></tr>
+				<tr><td>Direccion de correo* <input type="text" size="50" id="dirCorreo" name="dirCorreo"></td></tr>
+				<tr><td>Enunciado de la pregunta* <input type="text" size="75" id="pregunta" name="pregunta"></td></tr>
+				<tr><td>Respuesta correcta* <input type="text" size="75" id="respuestaCorrecta" name="respuestaCorrecta"></td></tr>
+				<tr><td>Respuesta Incorrecta 1* <input type="text" size="75" id="respuestaIncorrecta1" name="respuestaIncorrecta1"></td></tr>
+				<tr><td>Respuesta Incorrecta 2* <input type="text" size="75" id="respuestaIncorrecta2" name="respuestaIncorrecta2"></td></tr>
+				<tr><td>Respuesta Incorrecta 3* <input type="text" size="75" id="respuestaIncorrecta3" name="respuestaIncorrecta3"></td></tr>
+				<tr>
+					<td>
+						Complejidad* 
+						<select id="complejidad" name="complejidad" >
+							<option value="1">Baja</option>
+							<option value="2" selected>Media</option>
+							<option value="3">Alta</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td>Tema*<input type="text" size="50" id="tema" name="tema"></td></tr>
+				<tr><td><input type="file" id="file" accept="image/*" name="file"></td></tr>
+				<tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" value="Limpiar"></td></tr>
+			</table>
+		</form>
 
     </div>
   </section>
