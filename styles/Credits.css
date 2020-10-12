@@ -1,0 +1,10 @@
+table, tr, th, td {
+	align: center;
+}
+td {
+	width: 25%;
+}
+img {
+	width: 20%;
+	height: 20%;
+}

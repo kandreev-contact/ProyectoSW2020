@@ -3,6 +3,7 @@
 
 <head>
 	<?php include '../html/Head.html'?>
+	<link rel='stylesheet' type='text/css' href='../styles/Credits.css' />
 </head>
 
 <body>
