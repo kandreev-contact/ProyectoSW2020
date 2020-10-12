@@ -1,10 +1,13 @@
-table, tr, th, td {
-	align: center;
+table,
+tr,
+th,
+td {
+  align: center;
 }
 td {
-	width: 25%;
+  width: 25%;
 }
-img {
-	width: 20%;
-	height: 20%;
+.autores {
+  width: 20%;
+  height: 20%;
 }

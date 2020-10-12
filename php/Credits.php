@@ -10,9 +10,9 @@
 	<?php include '../php/Menus.php' ?>
 	<section class="main" id="s1">
 		<div>
-			<table border="1px">
+			<table>
 				<tr>
-					<th colspan="2" width="700">
+					<th colspan="2">
 						<h2>DATOS DEL AUTOR/AUTORES</h2>
 					</th>
 				</tr>
@@ -25,8 +25,8 @@
 					<td>Ingenieria de Computadores</td>
 				</tr>
 				<tr>
-					<td><img src="../autor-img/aimg-1.jpeg" alt="autor 1"></td>
-					<td><img src="../autor-img/aimg-2.jpeg" alt="autor 2"></td>
+					<td><img class="autores" src="../autor-img/aimg-1.jpeg" alt="autor 1"></td>
+					<td><img class="autores" src="../autor-img/aimg-2.jpeg" alt="autor 2"></td>
 				</tr>
 				<tr>
 					<td>kandreev001@ikasle.ehu.es</td>
