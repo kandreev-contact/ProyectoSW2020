@@ -16,8 +16,8 @@
 					</th>
 				</tr>
 				<tr>
-					<td width="50%">Konstantin Todorov Andreev</td>
-					<td width="50%">Daniel Ruskov Vangelov</td>
+					<td>Konstantin Todorov Andreev</td>
+					<td>Daniel Ruskov Vangelov</td>
 				</tr>
 				<tr>
 					<td>Ingereria de Software</td>
