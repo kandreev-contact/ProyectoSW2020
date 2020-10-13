@@ -7,9 +7,6 @@
 		.table_QuestionForm{
 			margin: auto;
 		}
-		td {
-  			width: 25%;
-		}
 	</style>
 </head>
 <body>

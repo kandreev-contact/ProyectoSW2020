@@ -9,8 +9,8 @@
 		.table_QuestionForm{
 			margin: auto;
 		}
-		td {
-  			width: 25%;
+		sup {
+			color: red;
 		}
 	</style>
 </head>
