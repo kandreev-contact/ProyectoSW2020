@@ -18,8 +18,8 @@
     <div>
 
     <!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
-	<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’>-->
-	<form id='fquestion' name='fquestion' action='prueba.php'>
+	<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
+	<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='prueba.php'>
 		<table class="table_QuestionForm">
 			<tr><th><h2>Insertar pregunta</h2><br/></th></tr>
 			<tr>
@@ -33,6 +33,7 @@
 			<tr><td>Respuesta Incorrecta 1* <input type="text" size="75" id="respuestaIncorrecta1" name="respuestaIncorrecta1" required></td></tr>
 			<tr><td>Respuesta Incorrecta 2* <input type="text" size="75" id="respuestaIncorrecta2" name="respuestaIncorrecta2" required></td></tr>
 			<tr><td>Respuesta Incorrecta 3* <input type="text" size="75" id="respuestaIncorrecta3" name="respuestaIncorrecta3" required></td></tr>
+			<tr><td>Tema*<input type="text" size="50" id="tema" name="tema" required></td></tr>
 			<tr>
 				<td>
 					Complejidad* 
@@ -43,7 +44,6 @@
 					</select>
 				</td>
 			</tr>
-			<tr><td>Tema*<input type="text" size="50" id="tema" name="tema" required></td></tr>
 			<tr><td><input type="file" id="file" accept="image/*" name="file"></td></tr>
 			<tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" value="Limpiar"></td></tr>
 		</table>

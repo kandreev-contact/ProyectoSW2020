@@ -15,7 +15,7 @@ function verImagen(input){
     }
 }
 
-$('document').ready(function(){
+$(document).ready(function(){
     $('#file').change(function(){
         verImagen(this);
     })

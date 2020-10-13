@@ -4,7 +4,7 @@
 <head>
 	<?php include '../html/Head.html'?>
 	<style>
-		.table_credits{
+		.table_Credits{
 			margin: auto;
 		}
 		td {
@@ -32,13 +32,8 @@
 					<td>Ingenieria de Computadores</td>
 				</tr >
 				<tr>
-<<<<<<< HEAD
 					<td><img class="autores" src="../images/aimg-1.jpeg" alt="autor 1"></td>
 					<td><img class="autores" src="../images/aimg-2.jpeg" alt="autor 2"></td>
-=======
-					<td><img class="autores" src="../images/autor-img/aimg-1.jpeg" alt="autor 1"></td>
-					<td><img class="autores" src="../images/autor-img/aimg-2.jpeg" alt="autor 2"></td>
->>>>>>> efffa854222c284451e83a3c41b18501184dc23d
 				</tr>
 				<tr>
 					<td><a href="mailto:kandreev001@ikasle.ehu.es">kandreev001@ikasle.ehu.es</a></td>
