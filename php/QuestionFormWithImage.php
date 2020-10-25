@@ -24,7 +24,7 @@
 
 			<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
-			<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestion.php'>
+			<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>
 				<table class="table_QuestionForm">
 					<tr>
 						<th>

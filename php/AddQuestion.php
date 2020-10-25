@@ -20,15 +20,13 @@
         }
         // Operar
         // echo "Connection OK.";
-        $sql = "INSERT INTO preguntas(email, enunciado, respuestac, respuestai1, respuestai2, respuestai3, complejidad, tema) VALUES('$_REQUEST[Direccion_de_correo]', '$_REQUEST[Pregunta]', '$_REQUEST[Respuesta_correcta]', '$_REQUEST[Respuesta_incorrecta_1]', '$_REQUEST[Respuesta_incorrecta_2]', '$_REQUEST[Respuesta_incorrecta_3]', '$_REQUEST[complejidad]', '$_REQUEST[tema]')";
+        $sql = "INSERT INTO preguntas(email, enunciado, respuestac, respuestai1, respuestai2, respuestai3, complejidad, tema) VALUES('$_REQUEST[Direccion_de_correo]', '$_REQUEST[Pregunta]', '$_REQUEST[Respuesta_correcta]', '$_REQUEST[Respuesta_incorrecta_1]', '$_REQUEST[Respuesta_incorrecta_2]', '$_REQUEST[Respuesta_incorrecta_3]', '$_REQUEST[complejidad]', '$_REQUEST[tema]');";
         if(!mysqli_query($mysqli, $sql)) {
           die("Fallo al insertar en la BD: " . mysqli_error($mysqli));
         }
         echo "Pregunta guardada en la BD";
         // Cerrar conexión
-        if(!mysqli_close($mysqli)) {
-          die("Fallo al cerrar la BD: " . mysqli_error($mysqli));
-        }
+        !mysqli_close($mysqli);
         // echo "Close OK.";
       ?>
       <br/>

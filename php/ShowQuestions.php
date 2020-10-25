@@ -33,7 +33,7 @@
         $resul = mysqli_query($link, $sql);
         echo '<table border="1px" class="table_Questions"><tr><th>Email</th><th>Enunciado</th><th>Respuesta Correcta</th><th>Respuesta Incorrecta 1</th> <th>Respuesta Incorrecta 2</th><th>Respuesta Incorrecta 3</th><th>Complejidad</th><th>Tema</th></tr>';
         while($row = mysqli_fetch_array($resul)){
-            echo "<tr><td>".$row['email']."</td><td>".$row['enunciado']."</td><td>".$row['respuestac']."</td><td>".$row['respuestai1']."</td><td>".$row['respuestai2']."</td><td>".$row['respuestai3']."</td><td>".$row['complejidad']."</td><td>".$row['tema']."</td></tr>";
+            echo "<tr><td><a href=\"mailto:".$row['email']."\">".$row['email']."</a></td><td>".$row['enunciado']."</td><td>".$row['respuestac']."</td><td>".$row['respuestai1']."</td><td>".$row['respuestai2']."</td><td>".$row['respuestai3']."</td><td>".$row['complejidad']."</td><td>".$row['tema']."</td></tr>";
         }
         echo "</table>";
         mysqli_close($link);

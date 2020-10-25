@@ -9,4 +9,7 @@
   <span><a href='Layout.php'>Inicio</a></span>
   <span><a href='QuestionFormWithImage.php'>Insertar Pregunta</a></span>
   <span><a href='Credits.php'>Creditos</a></span>
+  <span><a href='ShowQuestions.php'>Ver preguntas BD</a></span>
+  <span><a href='ShowQuestionsWithImage.php'>Ver preguntas BD+</a></span>
+  <!--<span><a href='prueba.php'>DebugPHP</a></span>-->
 </nav>
