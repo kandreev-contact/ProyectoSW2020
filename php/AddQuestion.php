@@ -10,32 +10,29 @@
   <?php include '../php/DbConfig.php' ?>
   <section class="main" id="s1">
     <div>
-      Código PHP para añadir una pregunta sin imagen
+      <!--Código PHP para añadir una pregunta sin imagen-->
       <br/>
       <?php
         // Realizar conexion php
         $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
         if (!$mysqli) {
-          die("\nFallo al conectar a MySQL: " . mysqli_connect_error());
+          die("Fallo al conectar a MySQL: " . mysqli_connect_error());
         }
-        $email = "druskov001@iksale.ehu.es";
-        $enunciado = "Quien creo esta pagina web?";
-        $respuestac = "Konstantin y Daniel";
-        $respuestai1 = "Elur y Asier";
-        $respuestai2 = "Jorge y Mauri";
-        $respuestai3 = "Se creo sola";
-        $complejidad = "1";
-        $tema = "Creditos.php";
-        echo "\r\nConnection OK.";
-        $sql = "INSERT INTO preguntas(email, enunciado, respuestac, respuestai1, respuestai2, respuestai3, complejidad, tema) VALUES('$email', '$enunciado', '$respuestac', '$respuestai1', '$respuestai2', '$respuestai3', $complejidad, '$tema')";
+        // Operar
+        // echo "Connection OK.";
+        $sql = "INSERT INTO preguntas(email, enunciado, respuestac, respuestai1, respuestai2, respuestai3, complejidad, tema) VALUES('$_REQUEST[Direccion_de_correo]', '$_REQUEST[Pregunta]', '$_REQUEST[Respuesta_correcta]', '$_REQUEST[Respuesta_incorrecta_1]', '$_REQUEST[Respuesta_incorrecta_2]', '$_REQUEST[Respuesta_incorrecta_3]', '$_REQUEST[complejidad]', '$_REQUEST[tema]')";
         if(!mysqli_query($mysqli, $sql)) {
-          die("\nError: " . mysqli_error($mysqli));
+          die("Fallo al insertar en la BD: " . mysqli_error($mysqli));
         }
-        echo "\r\nInsert OK.";
+        echo "Pregunta guardada en la BD";
         // Cerrar conexión
-        mysqli_close($mysqli);
-        echo "\r\nClose OK.";
+        if(!mysqli_close($mysqli)) {
+          die("Fallo al cerrar la BD: " . mysqli_error($mysqli));
+        }
+        // echo "Close OK.";
       ?>
+      <br/>
+      <span><a href='ShowQuestions.php'>Ver preguntas de la BD</a></span>
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
