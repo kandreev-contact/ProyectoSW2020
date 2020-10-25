@@ -18,4 +18,7 @@ $(document).ready(function () {
     $("#verImagen").remove();
     verImagen(this);
   });
+  $("#reset").click(function () {
+    $("#verImagen").remove();
+  });
 });

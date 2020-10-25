@@ -7,6 +7,9 @@
 		.table_QuestionForm{
 			margin: auto;
 		}
+		sup {
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -21,19 +24,19 @@
 			<tr><th><h2>Insertar pregunta</h2><br/></th></tr>
 			<tr>
 				<td>
-					Direccion de correo* 
+					Direccion de correo<sup>*</sup>
 					<input type="text" size="50" id="dirCorreo" name="dirCorreo" pattern="(^[a-zA-Z]+(\.[a-zA-Z]+@ehu\.(eus|es)|@ehu\.(eus|es))$|^[a-zA-Z]+(([0-9]{3})+@ikasle\.ehu\.(eus|es))$)" required>
 				</td>
 			</tr>
-			<tr><td>Enunciado de la pregunta* <input type="text" size="75" id="pregunta" name="pregunta" required></td></tr>
-			<tr><td>Respuesta correcta* <input type="text" size="75" id="respuestaCorrecta" name="respuestaCorrecta" required></td></tr>
-			<tr><td>Respuesta Incorrecta 1* <input type="text" size="75" id="respuestaIncorrecta1" name="respuestaIncorrecta1" required></td></tr>
-			<tr><td>Respuesta Incorrecta 2* <input type="text" size="75" id="respuestaIncorrecta2" name="respuestaIncorrecta2" required></td></tr>
-			<tr><td>Respuesta Incorrecta 3* <input type="text" size="75" id="respuestaIncorrecta3" name="respuestaIncorrecta3" required></td></tr>
+			<tr><td>Enunciado de la pregunta<sup>*</sup><input type="text" size="75" id="pregunta" name="pregunta" required></td></tr>
+			<tr><td>Respuesta correcta<sup>*</sup><input type="text" size="75" id="respuestaCorrecta" name="respuestaCorrecta" required></td></tr>
+			<tr><td>Respuesta Incorrecta 1<sup>*</sup><input type="text" size="75" id="respuestaIncorrecta1" name="respuestaIncorrecta1" required></td></tr>
+			<tr><td>Respuesta Incorrecta 2<sup>*</sup><input type="text" size="75" id="respuestaIncorrecta2" name="respuestaIncorrecta2" required></td></tr>
+			<tr><td>Respuesta Incorrecta 3<sup>*</sup><input type="text" size="75" id="respuestaIncorrecta3" name="respuestaIncorrecta3" required></td></tr>
 			<tr><td>Tema*<input type="text" size="50" id="tema" name="tema" required></td></tr>
 			<tr>
 				<td>
-					Complejidad* 
+					Complejidad<sup>*</sup>
 					<select id="complejidad" name="complejidad" >
 						<option value="1">Baja</option>
 						<option value="2" selected>Media</option>
@@ -41,8 +44,8 @@
 					</select>
 				</td>
 			</tr>
-			<tr><td><input type="file" id="file" accept="image/*" name="file"></td></tr>
-			<tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" value="Limpiar"></td></tr>
+			<tr><td><input type="file" id="file" accept="image/*" name="file"><div id="imgDynamica"></div></td></tr>
+			<tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td></tr>
 		</table>
 	</form>
 

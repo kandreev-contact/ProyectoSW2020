@@ -7,8 +7,11 @@
   	<!--<script src="../js/ShowImageInForm.js"></script>-->
   	<script src="../js/ValidateFieldsQuestion.js"></script>
 	<style>
-		.table_QuestionForm{
+		.table_QuestionForm {
 			margin: auto;
+		}
+		sup {
+			color: red;
 		}
 	</style>
 </head>
@@ -22,26 +25,45 @@
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’>  GET porque no envia imagen-->
 			<form id='fquestion' name='fquestion' method="GET" action='prueba.php'>
 				<table class="table_QuestionForm">
-					<tr><th><h2>Insertar pregunta</h2><br/></th></tr>
-					<tr><td>Direccion de correo* <input type="text" size="50" id="dirCorreo" name="Direccion de correo" ></td></tr>
-					<tr><td>Enunciado de la pregunta* <input type="text" size="75" id="pregunta" name="Pregunta"  ></td></tr>
-					<tr><td>Respuesta correcta* <input type="text" size="75" id="respuestaCorrecta" name="Respuesta correcta" ></td></tr>
-					<tr><td>Respuesta incorrecta 1* <input type="text" size="75" id="respuestaIncorrecta1" name="Respuesta incorrecta 1" ></td></tr>
-					<tr><td>Respuesta incorrecta 2* <input type="text" size="75" id="respuestaIncorrecta2" name="Respuesta incorrecta 2" ></td></tr>
-					<tr><td>Respuesta incorrecta 3* <input type="text" size="75" id="respuestaIncorrecta3" name="Respuesta incorrecta 3" ></td></tr>
-					<tr><td>Tema* <input type="text" size="50" id="tema" name="tema"></td></tr>
+					<tr>
+						<th>
+							<h2>Insertar pregunta</h2><br />
+						</th>
+					</tr>
+					<tr>
+						<td>Direccion de correo<sup>*</sup> <input type="text" size="50" id="dirCorreo" name="Direccion de correo"></td>
+					</tr>
+					<tr>
+						<td>Enunciado de pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>
+					</tr>
+					<tr>
+						<td>Respuesta correcta<sup>*</sup> <input type="text" size="75" id="respuestaCorrecta" name="Respuesta correcta"></td>
+					</tr>
+					<tr>
+						<td>Respuesta incorrecta 1<sup>*</sup> <input type="text" size="75" id="respuestaIncorrecta1" name="Respuesta incorrecta 1"></td>
+					</tr>
+					<tr>
+						<td>Respuesta incorrecta 2<sup>*</sup> <input type="text" size="75" id="respuestaIncorrecta2" name="Respuesta incorrecta 2"></td>
+					</tr>
+					<tr>
+						<td>Respuesta incorrecta 3<sup>*</sup> <input type="text" size="75" id="respuestaIncorrecta3" name="Respuesta incorrecta 3"></td>
+					</tr>
+					<tr>
+						<td>Tema<sup>*</sup> <input type="text" size="50" id="tema" name="tema"></td>
+					</tr>
 					<tr>
 						<td>
-							Complejidad* 
-							<select id="complejidad" name="complejidad" >
-								<option value="baja">Baja</option>
-								<option value="media" selected>Media</option>
-								<option value="alta">Alta</option>
+							Complejidad<sup>*</sup>
+							<select id="complejidad" name="complejidad">
+								<option value="1">Baja</option>
+								<option value="2" selected>Media</option>
+								<option value="3">Alta</option>
 							</select>
 						</td>
 					</tr>
-					<!--<tr><td><input type="file" id="file" accept="image/*" name="file"></td></tr>-->
-					<tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" value="Limpiar"></td></tr>
+					<tr>
+						<td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td>
+					</tr>
 				</table>
 			</form>
 

@@ -35,7 +35,7 @@
 						<td>Direccion de correo<sup>*</sup> <input type="text" size="50" id="dirCorreo" name="Direccion de correo"></td>
 					</tr>
 					<tr>
-						<td>Enunciado de la pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>
+						<td>Enunciado de pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>
 					</tr>
 					<tr>
 						<td>Respuesta correcta<sup>*</sup> <input type="text" size="75" id="respuestaCorrecta" name="Respuesta correcta"></td>
@@ -56,9 +56,9 @@
 						<td>
 							Complejidad<sup>*</sup>
 							<select id="complejidad" name="complejidad">
-								<option value="baja">Baja</option>
-								<option value="media" selected>Media</option>
-								<option value="alta">Alta</option>
+								<option value="1">Baja</option>
+								<option value="2" selected>Media</option>
+								<option value="3">Alta</option>
 							</select>
 						</td>
 					</tr>
@@ -68,7 +68,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input type="submit" id="submit" value="Enviar"> <input type="reset" value="Limpiar"></td>
+						<td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td>
 					</tr>
 				</table>
 			</form>

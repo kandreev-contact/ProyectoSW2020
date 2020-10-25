@@ -38,37 +38,3 @@ $(document).ready(function () {
 });
 
 // El boton reset (input type="reset") no necesita funcion de atencion, ya que por defecto resetea el form
-
-/* BACKUP
-function validarFormulario() {
-
-    var terminado = false;
-    var resul = true;
-    $("form :input").each(function () {
-        var input = $(this);
-        if (input.val() == "") {
-            resul = false;
-            alert("El campo " + "\' " + input.attr("name") + "\'" + " esta vacio.");
-            terminado = true;
-        } else {
-            if (input.attr("id") == "dirCorreo") {
-                resul = validarCorreo(input.val());
-                if (!resul) {
-                    alert("El correo electronico introducido no es correcto.");
-                    terminado = true;
-                }
-            } else if (input.attr("id") == "nombrePregunta") {
-                if (input.val().length < 10) {
-                    alert("El enunciado de la pregunta es demasiado corto.");
-                    resul = false;
-                    terminado = true;
-                }
-            }
-        }
-        if (terminado) {
-            return false;
-        }
-    });
-    return resul;
-}
-*/
