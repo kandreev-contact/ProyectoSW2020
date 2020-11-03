@@ -8,10 +8,19 @@
       border-collapse: collapse;
     }
     td, th {
-      padding: 10px;
+      padding: 5px;
     }
     th {
       background-color: #dbd2c3;
+    }
+    #div1 {
+         overflow: scroll;
+         height: 100%;
+         width: 100%;
+    }
+    #div1 table {
+        width: 95%;
+        background-color: lightgray;
     }
 	</style>
 </head>
@@ -19,7 +28,7 @@
   <?php include '../php/Menus.php'?>
   <?php include '../php/DbConfig.php'?>
   <section class="main" id="s1">
-    <div>
+    <div id = "div1">
       <!--Código PHP para mostrar una tabla con las preguntas de la BD.<br>
       La tabla no incluye las imágenes-->
       <?php

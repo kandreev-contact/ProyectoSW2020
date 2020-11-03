@@ -8,10 +8,19 @@
       border-collapse: collapse;
     }
     td, th {
-      padding: 10px;
+      padding: 5px;
     }
     th {
       background-color: #dbd2c3;
+    }
+    #div1 {
+         overflow: scroll;
+         height: 100%;
+         width: 100%;
+    }
+    #div1 table {
+        width: 95%;
+        background-color: lightgray;
     }
   </style>
 </head>
@@ -19,7 +28,7 @@
   <?php include '../php/Menus.php'?>
   <?php include '../php/DbConfig.php'?>
   <section class="main" id="s1">
-    <div>
+    <div id = "div1">
       <!--Código PHP para mostrar una tabla con las preguntas de la BD.<br/> La tabla incluye las imágenes de la BD.-->
       <?php
         //Creamos la conexion con la BD.
@@ -32,7 +41,7 @@
         $resul = mysqli_query($link, $sql);
         echo '<table border="1px" class="table_Questions"><tr><th>Email</th><th>Enunciado</th><th>Respuesta Correcta</th><th>Respuesta Incorrecta 1</th> <th>Respuesta Incorrecta 2</th><th>Respuesta Incorrecta 3</th><th>Complejidad</th><th>Tema</th><th>Imagen</th></tr>';
         while($row = mysqli_fetch_array($resul)){
-            echo "<tr><td><a href=\"mailto:".$row['email']."\">".$row['email']."</a></td><td>".$row['enunciado']."</td><td>".$row['respuestac']."</td><td>".$row['respuestai1']."</td><td>".$row['respuestai2']."</td><td>".$row['respuestai3']."</td><td>".$row['complejidad']."</td><td>".$row['tema']."</td><td><img width=\"150\" src=\"data:image/*;base64, ".$row['imagen']."\" alt=\"Sin imagen relacionada\"/></td></tr>";
+            echo "<tr><td><a href=\"mailto:".$row['email']."\">".$row['email']."</a></td><td>".$row['enunciado']."</td><td>".$row['respuestac']."</td><td>".$row['respuestai1']."</td><td>".$row['respuestai2']."</td><td>".$row['respuestai3']."</td><td>".$row['complejidad']."</td><td>".$row['tema']."</td><td><img width=\"150\" height=\"150\" src=\"data:image/*;base64, ".$row['imagen']."\" alt=\"Sin imagen relacionada\"/></td></tr>";
         }
         echo "</table>";
         mysqli_close($link);

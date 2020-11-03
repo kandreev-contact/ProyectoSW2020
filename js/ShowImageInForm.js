@@ -10,6 +10,7 @@ function verImagen(input) {
     };
     reader.readAsDataURL(input.files[0]);
     verImagen.width = "150";
+    verImagen.height = "150";
   }
 }
 

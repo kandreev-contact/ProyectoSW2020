@@ -5,15 +5,17 @@
 	<?php include '../html/Head.html' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
-	<script src="../js/ValidateFieldsQuestion.js"></script>
+	<!--<script src="../js/ValidateFieldsQuestion.js"></script>-->
 	<style>
 		.table_QuestionForm {
 			margin: auto;
 		}
-
 		sup {
 			color: red;
 		}
+		h2 {
+            color: darkblue;
+        }
 	</style>
 </head>
 
@@ -32,7 +34,7 @@
 						</th>
 					</tr>
 					<tr>
-						<td>Direccion de correo<sup>*</sup> <input type="text" size="50" id="dirCorreo" name="Direccion de correo"></td>
+						<td>Direccion de correo<sup>*</sup> <input type="text" size="75" id="dirCorreo" name="Direccion de correo"></td>
 					</tr>
 					<tr>
 						<td>Enunciado de pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>

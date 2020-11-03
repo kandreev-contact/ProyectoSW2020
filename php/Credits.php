@@ -11,8 +11,11 @@
   			width: 25%;
 		}
 		.autores {
-  			width: 10em;
-  			height: 10em;
+  			width: 150px;
+  			height: 150px;
+		}
+		h2 {
+			color: darkblue;
 		}
 	</style>
 </head>
