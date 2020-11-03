@@ -11,6 +11,9 @@
   <span id="insertar"><a href='QuestionFormWithImage.php'>Insertar pregunta</a></span>
   <span id="creditos"><a href='Credits.php'>Creditos</a></span>
   <!--<span><a href='ShowQuestions.php'>Ver preguntas BD</a></span>-->
-  <span><a href='ShowQuestionsWithImage.php'>Ver preguntas BD</a></span>
+  <span id="verBD"><a href='ShowQuestionsWithImage.php'>Ver preguntas BD</a></span>
   <!--<span><a href='prueba.php'>DebugPHP</a></span>-->
 </nav>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/ShowAndHide.js"></script>

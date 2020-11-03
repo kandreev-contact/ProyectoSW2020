@@ -18,6 +18,7 @@
         <?php
           echo "<p class=\"success\">Hasta pronto<p><br/>";
           echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
+          echo "<script> logOut(); </script>";
         ?>
     </div>
   </section>

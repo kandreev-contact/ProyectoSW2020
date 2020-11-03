@@ -54,9 +54,9 @@
           }
           $row = mysqli_fetch_array($resultado);
           if($row['email']==$email && hash_equals($row['pass'], crypt($pass1, $row['pass']))){
-            $_SESSION['correo']=$email;
             echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
             echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
+            echo "<script> logIn(); </script>";
 					} else {
             echo "<p class=\"error\">Usuario o contraseña incorrectos, prueba de nuevo<p><br/>";
             echo "<span><a href=\"javascript:history.back()\">Volver atras</a></span>";
