@@ -1,12 +1,3 @@
-var login = false;
-
-function logIn() {
-    login = true;
-}
-
-function logOut() {
-    login = false;
-}
 function showOnLogIn() {
     $('#registro').hide();
     $('#login').hide();
@@ -15,6 +6,7 @@ function showOnLogIn() {
     $('#insertar').show();
     $('#creditos').show();
     $('#verBD').show();
+    //$("#h1").append("<img width=\"50\" height=\"50\" src=\"data:image/*;base64,<?php echo getImagenDeBD();?>\" alt=\"Img\"/>");
 }
 
 function showOnNotLogIn() {
@@ -28,6 +20,5 @@ function showOnNotLogIn() {
 }
 
 $(document).ready(function () {
-    //if(login == true) showOnLogIn();
-    //else showOnNotLogIn();
+
 });

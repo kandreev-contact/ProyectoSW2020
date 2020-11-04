@@ -5,6 +5,7 @@
   <style>
 		.table_flogin {
 			margin: auto;
+      text-align: center;
 		}
 		sup {
 			color: red;
@@ -18,6 +19,7 @@
     .success {
         color: darkgreen;
     }
+    
   </style>
 </head>
 
@@ -31,14 +33,15 @@
           <tr><th><h2>Iniciar sesion</h2><br/></th></tr>
           <tr><td>Dirección de correo<sup>*</sup> <input type="email" size="65" id="dirCorreo" name="dirCorreo"></td></tr>
           <tr><td>Contraseña<sup>*</sup> <input type="password" size="75" id="pass1" name="pass1"></td></tr>
-          <tr><td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td></tr>
+          <tr><td><div id="buttons"><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></div></td></tr>
         </table>
       </form>
     </div>
 
     <div>
       <?php
-        if(isset($_REQUEST['dirCorreo'])){
+        
+        if(isset($_REQUEST['dirCorreo'])) {
           $email = $_REQUEST['dirCorreo'];
           $pass1 = $_REQUEST['pass1'];
           $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
@@ -53,17 +56,16 @@
             echo "<span><a href='javascript:history.back()'>Volver</a></span>";
           }
           $row = mysqli_fetch_array($resultado);
-          if($row['email']==$email && hash_equals($row['pass'], crypt($pass1, $row['pass']))){
-            echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
-            echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-            echo "<script> logIn(); </script>";
+          if(!empty($row) && $row['email']==$email && hash_equals($row['pass'], crypt($pass1, $row['pass']))){
+            // echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
+            // echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
+            echo "<script> alert(\"¡Bienvenido!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
 					} else {
-            echo "<p class=\"error\">Usuario o contraseña incorrectos, prueba de nuevo<p><br/>";
-            echo "<span><a href=\"javascript:history.back()\">Volver atras</a></span>";
+            echo "<p class=\"error\">Usuario o contraseña incorrectos!<p><br/>";
+            // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";
           }
         }
       ?>
-
     </div>
   </section>
   <?php include '../html/Footer.html' ?>

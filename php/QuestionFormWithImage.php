@@ -9,6 +9,7 @@
 	<style>
 		.table_QuestionForm {
 			margin: auto;
+			text-align: center;
 		}
 		sup {
 			color: red;
@@ -26,7 +27,8 @@
 
 			<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
-			<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>
+			<!--<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>-->
+			<?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php?logInMail=$logInMail'>"; ?>
 				<table class="table_QuestionForm">
 					<tr>
 						<th>
@@ -34,7 +36,7 @@
 						</th>
 					</tr>
 					<tr>
-						<td>Direccion de correo<sup>*</sup> <input type="text" size="75" id="dirCorreo" name="Direccion de correo"></td>
+						<td>Direccion de correo<sup>*</sup> <input type="text" size="75" id="dirCorreo" name="Direccion de correo" value="<?php echo $logInMail; ?>" readonly></td>
 					</tr>
 					<tr>
 						<td>Enunciado de pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>

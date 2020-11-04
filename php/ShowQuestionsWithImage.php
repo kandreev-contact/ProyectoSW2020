@@ -6,6 +6,7 @@
 		.table_Questions {
 			margin: auto;
       border-collapse: collapse;
+      text-align: center;
     }
     td, th {
       padding: 5px;

@@ -16,9 +16,7 @@
   <section class="main" id="s1">
     <div>
         <?php
-          echo "<p class=\"success\">Hasta pronto<p><br/>";
-          echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-          echo "<script> logOut(); </script>";
+          echo "<script> alert(\"¡Hasta pronto!\"); document.location.href='Layout.php'; </script>";
         ?>
     </div>
   </section>

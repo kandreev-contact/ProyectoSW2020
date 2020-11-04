@@ -65,8 +65,9 @@
             die("Fallo al insertar en la BD: " . mysqli_error($mysqli));
             echo "<span><a href='javascript:history.back()'>Volver al formulario</a></span>";
           } else {
-            echo "<p class=\"success\">Pregunta guardada en la BD<p><br/>";
-            echo "<span><a href='ShowQuestionsWithImage.php'>Ver preguntas de la BD</a></span>";
+            // echo "<p class=\"success\">Pregunta guardada en la BD<p><br/>";
+            // echo "<span><a href='ShowQuestionsWithImage.php'>Ver preguntas de la BD</a></span>";
+            echo "<script> alert(\"Pregunta guardada en la BD\"); document.location.href='QuestionFormWithImage.php?logInMail=$logInMail'; </script>";
           }
           // Cerrar conexión
           mysqli_close($mysqli);
