@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="ShowXmlQuestions.xsl" type="text/xsl"?>
 <assessmentItems>
 	<assessmentItem subject="Web" author="jvadillo001@ikasle.ehu.eus">
 		<itemBody>
