@@ -28,6 +28,7 @@
       echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php?logInMail=$logInMail'> Creditos </a> </span>";
       echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
+      echo "<span id='verXML'> <a id='ver2' href='ShowXMLQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
       echo "<script> $(\"#h1\").append(\"<p>$logInMail</p>\"); </script>";
       //echo "<script> $(\"#h1\").append(\"<img/>\");";
       echo "<script> showOnLogIn(); </script>";
@@ -36,9 +37,11 @@
       echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php'>Insertar pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php'> Ver preguntas BD </a> </span>";
+      echo "<span id='verXML'> <a id='ver2' href='ShowQuestionsWithImage.php'> Ver preguntas XML </a> </span>";
       echo "<script> showOnNotLogIn(); </script>";
     }
 
+    /*
     function getImagenDeBD()
     {
       $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
@@ -55,5 +58,6 @@
       $img = mysqli_fetch_array($resul);
       return $img['imagen'];
     }
+    */
     ?>
   </nav>
