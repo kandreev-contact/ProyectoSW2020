@@ -9,7 +9,7 @@
     else {
         $server="localhost";
         $user="id15117638_admin";
-        $pass="***hidden***";
+        $pass="SW2020@QuizDB";
         $basededatos="id15117638_quiz";
     }
 ?>
