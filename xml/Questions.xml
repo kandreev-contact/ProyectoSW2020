@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="ShowXmlQuestions.xsl" type="text/xsl"?>
 <assessmentItems>
 	<assessmentItem subject="Web" author="jvadillo001@ikasle.ehu.eus">
 		<itemBody>
@@ -46,17 +47,4 @@
 			<response> Test es correcta </response>
 		</incorrectResponses>
 	</assessmentItem>
-	<assessmentItem subject="xmlxmlxmlxmlxmlxml" author="druskov001@ikasle.ehu.es">
-		<itemBody>
-			<p>xmlxmlxmlxmlxmlxml</p>
-		</itemBody>
-		<correctResponse>
-			<response>xmlxmlxmlxmlxmlxml</response>
-		</correctResponse>
-		<incorrectResponses>
-			<response>xmlxmlxmlxmlxmlxml</response>
-			<response>xmlxmlxmlxmlxmlxml</response>
-			<response>xmlxmlxmlxmlxmlxml</response>
-		</incorrectResponses>
-	</assessmentItem>
-<assessmentItem subject="1234567890" author="druskov001@ikasle.ehu.es"><itemBody><p>1234567890</p></itemBody><correctResponse><response>1234567890</response></correctResponse><incorrectResponses><response>1234567890</response><response>1234567890</response><response>123456890</response></incorrectResponses></assessmentItem></assessmentItems>
+</assessmentItems>
