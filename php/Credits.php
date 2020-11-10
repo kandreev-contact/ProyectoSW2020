@@ -39,8 +39,8 @@
 					<td><img class="autores" src="../images/aimg-2.jpeg" alt="autor 2"></td>
 				</tr>
 				<tr>
-					<td><a href="mailto:kandreev001@ikasle.ehu.es">kandreev001@ikasle.ehu.es</a></td>
-					<td><a href="mailto:druskov001@ikasle.ehu.es">druskov001@ikasle.ehu.es</a></td>
+					<td><a href="mailto:kandreev001@ikasle.ehu.eus">kandreev001@ikasle.ehu.eus</a></td>
+					<td><a href="mailto:druskov001@ikasle.ehu.eus">druskov001@ikasle.ehu.eus</a></td>
 				</tr>
 			</table>
 		</div>
