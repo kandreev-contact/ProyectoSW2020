@@ -29,7 +29,7 @@
     <?php include '../php/Menus.php' ?>
     <section class="main" id="s1">
         <div>
-            <?php echo "<form id='fquestion' name='fquestion' method='GET' enctype='multipart/form-data'>"; ?>
+            <?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data'>"; ?>
             <table class="table_QuestionForm">
                 <tr>
                     <th>
