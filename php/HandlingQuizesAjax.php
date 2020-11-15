@@ -8,6 +8,7 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/AddQuestionsAjax.js"></script>
     <script src="../js/ShowQuestionsAjax.js"></script>
+    <script src="../js/CountQuestionsAjax.js"></script>
     <script src="../js/ValidateFieldsQuestion.js"></script>
     <style>
         .table_QuestionForm {
@@ -22,13 +23,41 @@
         h2 {
             color: darkblue;
         }
+        #div1 {
+            overflow: scroll;
+            height: 100%;
+            width: 100%;
+        }
+        #contadores,
+        #div1 table {
+            width: 95%;
+            background-color: lightgray;
+            margin: auto;
+            text-align: center;
+        }
+
+        .table_QuestionsXML {
+            margin: auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+        padding: 5px;
+        }
+
+        #thQ {
+            background-color: #dbd2c3;
+        }
     </style>
 </head>
 
 <body>
     <?php include '../php/Menus.php' ?>
+    <?php include '../php/CountXMLQuestions.php' ?>
     <section class="main" id="s1">
-        <div>
+        <div id="div1">
             <?php echo "<form id='fquestion' name='fquestion' method='GET' enctype='multipart/form-data'>"; ?>
             <table class="table_QuestionForm">
                 <tr>
@@ -68,10 +97,16 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="button" id="insertar" value="Insertar Pregunta"> <input type="button" id="Show" onClick="VerPreguntas()" value="Ver preguntas"><input type="reset" id="reset" value="Limpiar"></td>
+                    <td><input type="button" id="insertar" value="Insertar Pregunta"> <input type="button" id="Show" onClick="VerPreguntas()" value="Ver preguntas"> <input type="reset" id="reset" value="Limpiar"></td>
                 </tr>
             </table>
             </form>
+            <br/>
+            <div id="contadores">
+                <h4>TOTAL PREGUNTAS / TUS PREGUNTAS</h4>
+                <div id="contPreguntas"></div>
+            </div>
+            <img id="cargando" src="../images/cargando.gif" height="30">
             <div id="res">
 
             </div>

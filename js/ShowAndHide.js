@@ -7,6 +7,7 @@ function showOnLogIn() {
     $('#creditos').show();
     $('#verBD').show();
     $('#verXML').show();
+    $('#verXSL').show();
     //$("#h1").append("<img width=\"50\" height=\"50\" src=\"data:image/*;base64,<?php echo getImagenDeBD();?>\" alt=\"Img\"/>");
 }
 
@@ -19,6 +20,7 @@ function showOnNotLogIn() {
     $('#creditos').show();
     $('#verBD').hide();
     $('#verXML').hide();
+    $('#verXSL').hide();
 }
 
 $(document).ready(function () {

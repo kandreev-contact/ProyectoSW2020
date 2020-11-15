@@ -1,24 +1,25 @@
 <?php
 
-if (isset($_REQUEST['DireccionCorreoElectronico'])) {
+if (isset($_REQUEST['Direccion_de_correo'])) {
     $regexMail = "/((^[a-zA-Z]+(([0-9]{3})+@ikasle\.ehu\.(eus|es))$)|^[a-zA-Z]+(\.[a-zA-Z]+@ehu\.(eus|es)|@ehu\.(eus|es))$)/";
     $regexPreg = "/^.{10,}$/";
 
 
-    if (preg_match($regexPreg, $_REQUEST['EnunciadoPregunta'])) {
+    if (preg_match($regexPreg, $_REQUEST['Pregunta'])) {
         include 'DbConfig.php';
         $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
         if (!$mysqli) {
             die("Fallo al conectar a MySQL: " . mysqli_connect_error());
         }
-        $email = $_REQUEST['DireccionCorreoElectronico'];
-        $enunciado = $_REQUEST['EnunciadoPregunta'];
-        $respuestac = $_REQUEST['RespuestaCorrecta'];
-        $respuestai1 = $_REQUEST['RespuestaIncorrecta1'];
-        $respuestai2 = $_REQUEST['RespuestaIncorrecta2'];
-        $respuestai3 = $_REQUEST['RespuestaIncorrecta3'];
-        $complejidad = $_REQUEST['Complejidad'];
-        $tema = $_REQUEST['TemadelaPregunta'];
+        $email = $_REQUEST['Direccion_de_correo'];
+        $enunciado = $_REQUEST['Pregunta'];
+        $respuestac = $_REQUEST['Respuesta_correcta'];
+        $respuestai1 = $_REQUEST['Respuesta_incorrecta_1'];
+        $respuestai2 = $_REQUEST['Respuesta_incorrecta_2'];
+        $respuestai3 = $_REQUEST['Respuesta_incorrecta_3'];
+        $complejidad = $_REQUEST['complejidad'];
+        $tema = $_REQUEST['tema'];
+        $imagen = $_FILES['file']['tmp_name'];
 
         $sql = "INSERT INTO preguntas(email, enunciado, respuestac, respuestai1, respuestai2, respuestai3, complejidad, tema) VALUES('$email', '$enunciado', '$respuestac', '$respuestai1', '$respuestai2', '$respuestai3', $complejidad, '$tema')";
 
@@ -30,16 +31,16 @@ if (isset($_REQUEST['DireccionCorreoElectronico'])) {
             die("Error: Fallo al entrar en la carpeta xml");
         }
         $assessmentItem = $xml->addChild('assessmentItem');
-        $assessmentItem->addAttribute('subject', $_REQUEST['TemadelaPregunta']);
-        $assessmentItem->addAttribute('author', $_REQUEST['DireccionCorreoElectronico']);
+        $assessmentItem->addAttribute('subject', $tema);
+        $assessmentItem->addAttribute('author', $email);
         $itemBody = $assessmentItem->addChild('itemBody');
-        $itemBody->addChild('p', $_REQUEST['EnunciadoPregunta']);
+        $itemBody->addChild('p', $enunciado);
         $correctResponse = $assessmentItem->addChild('correctResponse');
-        $correctResponse->addChild('value', $_REQUEST['RespuestaCorrecta']);
+        $correctResponse->addChild('value', $respuestac);
         $incorrectResponses = $assessmentItem->addChild('incorrectResponses');
-        $incorrectResponses->addChild('value', $_REQUEST['RespuestaIncorrecta1']);
-        $incorrectResponses->addChild('value', $_REQUEST['RespuestaIncorrecta2']);
-        $incorrectResponses->addChild('value', $_REQUEST['RespuestaIncorrecta3']);
+        $incorrectResponses->addChild('value', $respuestai1);
+        $incorrectResponses->addChild('value', $respuestai2);
+        $incorrectResponses->addChild('value', $respuestai3);
         $xml->asXML();
         $xml->asXML('../xml/Questions.xml');
         echo "Registro añadido correctamente";
@@ -48,3 +49,4 @@ if (isset($_REQUEST['DireccionCorreoElectronico'])) {
         echo "El enunciado de la pregunta debe tener mas de 10 caracteres.<br>";
     }
 }
+?>

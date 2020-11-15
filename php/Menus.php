@@ -25,19 +25,24 @@
     if (isset($_REQUEST['logInMail'])) {
       $logInMail = $_REQUEST['logInMail'];
       echo "<span id='inicio'><a id='ini' href='Layout.php?logInMail=$logInMail'>Inicio</a></span>";
-      echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
-      echo "<span id='creditos'> <a id='cre' href='Credits.php?logInMail=$logInMail'> Creditos </a> </span>";
+      // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
+      echo "<span id='insertar'><a id='ins' href='HandlingQuizesAjax.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
       echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
       echo "<span id='verXML'> <a id='ver2' href='ShowXMLQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
+      echo "<span id='verXSL'> <a id='ver3' href='ejemplotransformar1.php?logInMail=$logInMail'> Ver preguntas XSL </a> </span>";
+      echo "<span id='creditos'> <a id='cre' href='Credits.php?logInMail=$logInMail'> Creditos </a> </span>";
+     
       echo "<script> $(\"#h1\").append(\"<p>$logInMail</p>\"); </script>";
       //echo "<script> $(\"#h1\").append(\"<img/>\");";
       echo "<script> showOnLogIn(); </script>";
     } else {
       echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
-      echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php'>Insertar pregunta</a></span>";
-      echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
+      // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php'>Insertar pregunta</a></span>";
+      echo "<span id='insertar'><a id='ins' href='HandlingQuizesAjax.php?'>Insertar pregunta</a></span>";
       echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php'> Ver preguntas BD </a> </span>";
       echo "<span id='verXML'> <a id='ver2' href='ShowQuestionsWithImage.php'> Ver preguntas XML </a> </span>";
+      echo "<span id='verXSL'> <a id='ver3' href='ejemplotransformar1.php'> Ver preguntas XSL </a> </span>";
+      echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       echo "<script> showOnNotLogIn(); </script>";
     }
 

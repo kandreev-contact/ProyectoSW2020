@@ -35,6 +35,9 @@ $(document).ready(function () {
     $('#submit').click(function () {
         return validarFormulario();
     });
+    $("#reset").click(function () {
+        $("#res").empty();
+      });
 });
 
 // El boton reset (input type="reset") no necesita funcion de atencion, ya que por defecto resetea el form
