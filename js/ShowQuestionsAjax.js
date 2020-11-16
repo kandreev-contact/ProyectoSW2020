@@ -1,6 +1,7 @@
 function VerPreguntas() {
-  xhr = new XMLHttpRequest();
-  xhr.open("GET", "ShowXMLQuestions.php", true);
+  if(XMLHttpRequest) xhr = new XMLHttpRequest();
+  else xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  xhr.open("GET", "ShowXMLQuestionsAjax.php", true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200)
       document.getElementById("res").innerHTML = xhr.responseText;
