@@ -10,6 +10,7 @@
     <script src="../js/ShowQuestionsAjax.js"></script>
     <script src="../js/CountQuestionsAjax.js"></script>
     <script src="../js/ValidateFieldsQuestion.js"></script>
+    <script src="../js/ShowImageInForm.js"></script>
     <style>
         .table_QuestionForm {
             margin: auto;
@@ -66,8 +67,8 @@
     <?php include '../php/CountXMLQuestions.php' ?>
     <section class="main" id="s1">
         <div id="div1">
-            <?php echo "<form id='fquestion' name='fquestion' method='GET' enctype='multipart/form-data'>"; ?>
-            <table class="table_QuestionForm">
+            <form id='fquestion' name='fquestion'>
+			<table class="table_QuestionForm">
                 <tr>
                     <th colspan="2">
                         <h2>Insertar pregunta</h2><br />
@@ -105,7 +106,17 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="button" id="insertar" value="Insertar Pregunta"> <input type="button" id="Show" onClick="VerPreguntas()" value="Ver preguntas"> <input type="reset" id="reset" value="Limpiar"></td>
+					<td colspan="2"><input type="file" id="file" accept="image/*" name="file">
+						<div id="imgDynamica"></div>
+					</td>
+				</tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" id="DO_IT" value="DO_IT">
+                        <input type="button" id="insertar" value="Insertar Pregunta"> 
+                        <input type="button" id="Show" onClick="VerPreguntas()" value="Ver preguntas"> 
+                        <input type="reset" id="reset" value="Limpiar">
+                    </td>
                 </tr>
             </table>
             </form>
