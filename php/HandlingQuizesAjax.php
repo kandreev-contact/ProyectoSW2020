@@ -66,9 +66,19 @@
     <?php include '../php/Menus.php' ?>
     <?php include '../php/CountXMLQuestions.php' ?>
     <section class="main" id="s1">
+
+        <div>
+            <?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data'>"; ?>
+
         <div id="div1">
+
             <form id='fquestion' name='fquestion'>
 			<table class="table_QuestionForm">
+
+            <?php echo "<form id='fquestion' name='fquestion' method='GET' enctype='multipart/form-data'>"; ?>
+
+            <table class="table_QuestionForm">
+
                 <tr>
                     <th colspan="2">
                         <h2>Insertar pregunta</h2><br />
