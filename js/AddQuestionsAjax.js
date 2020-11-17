@@ -16,6 +16,7 @@ $(document).ready(function () {
         timeout: 500000,
         success: function (data) {
           alert("Pregunta guardada en la BD y en XML");
+          $("#reset").click();
           $("#res").click(VerPreguntas());
         },
         error: function (e) {
