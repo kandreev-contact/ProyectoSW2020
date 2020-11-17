@@ -64,18 +64,11 @@
 
 <body>
     <?php include '../php/Menus.php' ?>
-    <?php include '../php/CountXMLQuestions.php' ?>
     <section class="main" id="s1">
-
-        <div>
-            <?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data'>"; ?>
-
         <div id="div1">
 
-            <form id='fquestion' name='fquestion'>
-			<table class="table_QuestionForm">
+            <form id='fquestion' name='fquestion' enctype='multipart/form-data'>
 
-            <?php echo "<form id='fquestion' name='fquestion' method='GET' enctype='multipart/form-data'>"; ?>
 
             <table class="table_QuestionForm">
 
@@ -122,8 +115,7 @@
 				</tr>
                 <tr>
                     <td colspan="2">
-                        <input type="button" id="DO_IT" value="DO_IT">
-                        <input type="button" id="insertar" value="Insertar Pregunta"> 
+                        <input type="button" id="insert" value="Insertar Pregunta"> 
                         <input type="button" id="Show" onClick="VerPreguntas()" value="Ver preguntas"> 
                         <input type="reset" id="reset" value="Limpiar">
                     </td>
@@ -133,11 +125,10 @@
             <br/><br/>
             <div id="contadores">
                 <h4>TOT PREGUNTAS / TUS PREGUNTAS</h4>
-                <div id="contPreguntas"></div>
+            <div id="contPreguntas"></div>
             </div>
-            <img id="cargando" src="../images/cargando.gif" height="30">
-            <div id="res">
-
+                <img id="cargando" src="../images/cargando.gif" height="30">
+                <div id="res"></div>
             </div>
         </div>
     </section>

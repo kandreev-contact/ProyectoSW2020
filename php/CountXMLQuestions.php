@@ -9,6 +9,6 @@
             if ($atributos['author'] == $logInMail){ $count = $count + 1;}
             $countTot = $countTot + 1;
         }
-        echo '<p style="color: #999">' .($countTot." / ".$count).'</p>';
+        echo $countTot." / ".$count;
     }
 ?>

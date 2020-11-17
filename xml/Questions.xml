@@ -47,4 +47,4 @@
 			<response> Test es correcta </response>
 		</incorrectResponses>
 	</assessmentItem>
-<assessmentItem subject="1234567890" author="druskov002@ikasle.ehu.es"><itemBody><p>1234567890</p></itemBody><correctResponse><response>1234567890</response></correctResponse><incorrectResponses><response>1234567890</response><response>1234567890</response><response>1234567890</response></incorrectResponses></assessmentItem></assessmentItems>
+</assessmentItems>
