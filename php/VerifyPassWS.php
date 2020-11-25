@@ -14,14 +14,12 @@ array('z'=>'xsd:string'),
 $ns);
 
 function ComprobarPass ($x, $y){
-	
 	if($y != 1010){
-		
 		return 'SIN SERVICIO';
 	}else{
 		$pagina = file_get_contents('../txt/toppasswords.txt');
 		$pos = strpos($pagina, $x);
-		if($pos === false)
+		if($pos == false)
 			return 'VALIDA';
 		else
 			return 'INVALIDA';
