@@ -5,6 +5,7 @@
     <?php include '../html/Head.html' ?>
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/ShowImageInForm.js"></script>
+    <script src="../js/CheckEmailOrPass.js"></script>
     <style>
         .table_fregister {
             margin: auto;
@@ -26,6 +27,21 @@
         .success {
             color: darkgreen;
         }
+        #div1 table {
+            width: 95%;
+            background-color: lightgray;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .izda {
+            text-align: right;
+            width: 40%;
+        }
+        .dcha {
+            text-align: left;
+            width: 60%;
+        }
     </style>
 </head>
 
@@ -33,40 +49,43 @@
     <?php include '../php/Menus.php' ?>
     <?php include '../php/DbConfig.php' ?>
     <section class="main" id="s1">
-        <div>
+        <div id="div1">
             <form id="fregister" name="fregister" method="POST" enctype="multipart/form-data" action="SignUp.php">
                 <table class="table_fregister">
                     <tr>
-                        <th>
+                        <th colspan="2">
                             <h2>Registro de nuevo usuario</h2><br />
                         </th>
                     </tr>
                     <tr>
-                        <td>Tipo de usuario<sup>*</sup>
+                        <td class="izda">Tipo de usuario<sup>*</sup> </td>
+                        <td class="dcha">
                             <select id="tipoUsu" name="tipoUsu">
                                 <option value="1" selected>Alumno</option>
                                 <option value="2">Profesor</option>
                             </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Dirección de correo<sup>*</sup> <input type="email" size="75" id="dirCorreo" name="dirCorreo"></td>
+                        <td class="izda">Dirección de correo<sup>*</sup> </td> <td class="dcha"> <input type="email" size="50" id="dirCorreo" name="dirCorreo" onfocus="CleanEmail()" onblur="CheckEmail()"> <span id="CheckEmail" ></span></td>
+                        
                     </tr>
                     <tr>
-                        <td>Nombre y apellido(s)<sup>*</sup> <input type="text" size="75" id="nAp" name="nAp"></td>
+                        <td class="izda">Nombre y apellido(s)<sup>*</sup> </td> <td class="dcha"> <input type="text" size="50" id="nAp" name="nAp"></td>
                     </tr>
                     <tr>
-                        <td>Contraseña (long>5)<sup>*</sup> <input type="password" size="75" id="pass1" name="pass1"></td>
+                        <td class="izda">Contraseña (long>5)<sup>*</sup> </td> <td class="dcha"> <input type="password" size="50" id="pass1" name="pass1" onfocus="CleanPass()" onblur="CheckPass()"> <span id="CheckPass" ></span></td>
                     </tr>
                     <tr>
-                        <td>Repite la contraseña<sup>*</sup> <input type="password" size="75" id="pass2" name="pass2"></td>
+                        <td class="izda">Repite la contraseña<sup>*</sup> </td> <td class="dcha"> <input type="password" size="50" id="pass2" name="pass2"></td>
                     </tr>
                     <tr>
-                        <td>Foto de perfil (opc) <input type="file" id="file" accept="image/*" name="file">
+                        <td class="izda">Foto de perfil (opc) </td> <td class="dcha"> <input type="file" id="file" accept="image/*" name="file">
                             <div id="imgDynamica"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td>
+                        <td colspan="2"><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td>
                     </tr>
                 </table>
             </form>
