@@ -1,5 +1,8 @@
-<html>
+<?php
+session_start();
+?>
 
+<html>
 <head>
   <?php include '../html/Head.html' ?>
   <style>
@@ -74,7 +77,14 @@
         if (!empty($row) && $row['email'] == $email && hash_equals($row['pass'], crypt($pass1, $row['pass']))) {
           // echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
           // echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-          echo "<script> alert(\"¡Bienvenido!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
+          if($row['estado']=="Bloqueado") {
+            echo "<script> alert('Su cuenta esta actualmente bloqueada'); </script>";  
+          } else {
+            // echo "<script> alert(\"¡Bienvenido!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
+            $_SESSION['correo']=$email;
+            echo "<script> alert(\"¡Bienvenido!\"); </script>";
+          }
+          echo "window.location.href='Layout.php';"
         } else {
           echo "<p class=\"error\">Usuario o contraseña incorrectos!<p><br/>";
           // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";
