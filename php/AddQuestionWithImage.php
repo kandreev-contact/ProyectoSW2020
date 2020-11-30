@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+if (isset($_SESSION['correo'])) {
+    if ($_SESSION['correo'] == "admin@ehu.es") {
+        echo
+            "<script> 
+					alert('Debes de iniciar sesion como usuario');
+                    window.location.href='Layout.php';
+				</script>";
+    }
+} else {
+    echo
+        "<script> 
+      alert('Debes de iniciar sesion como usuario');
+      window.location.href = 'Layout.php';
+    </script>";
+}
+?>
 <!DOCTYPE html>
 <html>
 

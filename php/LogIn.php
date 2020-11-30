@@ -26,6 +26,28 @@ session_start();
     .success {
       color: darkgreen;
     }
+
+    .izda {
+            text-align: right;
+            width: 40%;
+        }
+
+        .dcha {
+            text-align: left;
+            width: 60%;
+        }
+
+        #div1 table {
+            width: 95%;
+            background-color: lightgray;
+            margin: auto;
+            text-align: center;
+        }
+        #div1 {
+            overflow: scroll;
+            height: 100%;
+            width: 100%;
+        }
   </style>
 </head>
 
@@ -33,30 +55,30 @@ session_start();
   <?php include '../php/Menus.php' ?>
   <?php include '../php/DbConfig.php' ?>
   <section class="main" id="s1">
-    <div>
+    <div id='div1'>
       <form id="flogin" name="flogin" method="POST" enctype="multipart/form-data" action="LogIn.php">
         <table class="table_flogin">
           <tr>
-            <th>
+            <th colspan='2'>
               <h2>Iniciar sesion</h2><br />
             </th>
           </tr>
           <tr>
-            <td>Dirección de correo<sup>*</sup> <input type="email" size="65" id="dirCorreo" name="dirCorreo"></td>
+            <td class="izda">Dirección de correo<sup>*</sup> </td>
+            <td class="dcha"><input type="email" size="50" id="dirCorreo" name="dirCorreo"></td>
           </tr>
           <tr>
-            <td>Contraseña<sup>*</sup> <input type="password" size="75" id="pass1" name="pass1"></td>
+            <td class="izda">Contraseña<sup>*</sup></td>
+            <td class="dcha"><input type="password" size="50" id="pass1" name="pass1"></td>
           </tr>
           <tr>
-            <td align="center">
+            <td align="center" colspan="2">
               <div id="buttons"><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></div>
             </td>
           </tr>
         </table>
       </form>
-    </div>
-
-    <div>
+      <div>
       <?php
 
       if (isset($_REQUEST['dirCorreo'])) {
@@ -92,6 +114,9 @@ session_start();
       }
       ?>
     </div>
+    </div>
+
+   
   </section>
   <?php include '../html/Footer.html' ?>
 </body>

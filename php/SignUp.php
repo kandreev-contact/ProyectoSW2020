@@ -89,8 +89,7 @@
                     </tr>
                 </table>
             </form>
-        </div>
-        <div>
+            <div>
             <?php
             if (isset($_REQUEST['dirCorreo'])) {
                 $exprMail = "/((^[a-zA-Z]+(([0-9]{3})+@ikasle\.ehu\.(eus|es))$)|^[a-zA-Z]+(\.[a-zA-Z]+@ehu\.(eus|es)|@ehu\.(eus|es))$)/";
@@ -161,6 +160,8 @@
             }
             ?>
         </div>
+        </div>
+        
     </section>
     <?php include '../html/Footer.html' ?>
 </body>

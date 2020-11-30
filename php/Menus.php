@@ -51,7 +51,7 @@
     echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php'> Ver preguntas BD </a> </span>";
     echo "<span id='verXML'> <a id='ver2' href='ShowQuestionsWithImage.php'> Ver preguntas XML </a> </span>";
     echo "<span id='verXSL'> <a id='ver3' href='ejemplotransformar1.php'> Ver preguntas XSL </a> </span>";
-    echo "<span id='admin'> <a id='adm' href='prueba.php'> Gestionar cuentas </a> </span>";
+    echo "<span id='admin'> <a id='adm' href='HandlingAccounts.php'> Gestionar cuentas </a> </span>";
     echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
     /*
     function getImagenDeBD()
