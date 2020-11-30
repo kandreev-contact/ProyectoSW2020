@@ -1,6 +1,6 @@
 <?php 
-    if (isset($_REQUEST['logInMail'])) {
-        $logInMail = $_REQUEST['logInMail'];
+   // if (isset($_REQUEST['logInMail'])) {
+   //     $logInMail = $_REQUEST['logInMail'];
         $xml = simplexml_load_file("../xml/Questions.xml");
         $count = 0;
         $countTot = 0;
@@ -10,5 +10,5 @@
             $countTot = $countTot + 1;
         }
         echo $countTot." / ".$count;
-    }
+   // }
 ?>

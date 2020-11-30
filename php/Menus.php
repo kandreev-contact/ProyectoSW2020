@@ -22,7 +22,7 @@
   <!--<span><a href='ShowQuestions.php'>Ver preguntas BD</a></span>-->
     <!--<span><a href='prueba.php'>DebugPHP</a></span>-->
     <?php
-    if (isset($_REQUEST['logInMail'])) {
+    /*if (isset($_REQUEST['logInMail'])) {
       $logInMail = $_REQUEST['logInMail'];
       echo "<span id='inicio'><a id='ini' href='Layout.php?logInMail=$logInMail'>Inicio</a></span>";
       // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
@@ -44,8 +44,15 @@
       echo "<span id='verXSL'> <a id='ver3' href='ejemplotransformar1.php'> Ver preguntas XSL </a> </span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       echo "<script> showOnNotLogIn(); </script>";
-    }
-
+    }*/
+    echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
+    // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php'>Insertar pregunta</a></span>";
+    echo "<span id='insertar'><a id='ins' href='HandlingQuizesAjax.php'>Insertar pregunta</a></span>";
+    echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php'> Ver preguntas BD </a> </span>";
+    echo "<span id='verXML'> <a id='ver2' href='ShowQuestionsWithImage.php'> Ver preguntas XML </a> </span>";
+    echo "<span id='verXSL'> <a id='ver3' href='ejemplotransformar1.php'> Ver preguntas XSL </a> </span>";
+    echo "<span id='admin'> <a id='adm' href='prueba.php'> Gestionar cuentas </a> </span>";
+    echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
     /*
     function getImagenDeBD()
     {
@@ -64,5 +71,17 @@
       return $img['imagen'];
     }
     */
+
+    if(isset($_SESSION['correo'])){	
+      if($_SESSION['correo'] == "admin@ehu.es"){
+        echo "<script>LogInAdmin();</script>";
+        echo "<script> $('#h1').append('<p>" .$_SESSION['correo']. "</p>'); </script>";
+      }else{
+        echo "<script>showOnLogIn();</script>";
+        echo "<script> $('#h1').append('<p>" .$_SESSION['correo']. "</p>'); </script>";
+      }
+    }else{
+       echo "<script>showOnNotLogIn();</script>";
+    }
     ?>
   </nav>

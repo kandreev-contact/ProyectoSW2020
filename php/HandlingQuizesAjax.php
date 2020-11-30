@@ -102,7 +102,7 @@ if (isset($_SESSION['correo'])) {
                     </tr>
                     <tr>
                         <td class="izda">Direccion de correo<sup>*</sup></td>
-                        <td class="dcha"><input type="text" size="75" id="dirCorreo" name="Direccion de correo" value="<?php echo $logInMail; ?>" readonly></td>
+                        <td class="dcha"><input type="text" size="75" id="dirCorreo" name="Direccion de correo" value="<?php echo $_SESSION['correo'] ?>" readonly></td>
                     </tr>
                     <tr>
                         <td class="izda">Enunciado de pregunta<sup>*</sup></td>

@@ -84,7 +84,7 @@ session_start();
             $_SESSION['correo']=$email;
             echo "<script> alert(\"¡Bienvenido!\"); </script>";
           }
-          echo "window.location.href='Layout.php';"
+          echo "<script> window.location.href='Layout.php'; </script>";
         } else {
           echo "<p class=\"error\">Usuario o contraseña incorrectos!<p><br/>";
           // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";

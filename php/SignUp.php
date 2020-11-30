@@ -104,6 +104,7 @@
                 $pass1 = $_REQUEST['pass1'];
                 $pass2 = $_REQUEST['pass2'];
                 $imagen = $_FILES['file']['tmp_name'];
+                $estado = 'Activo';
                 /* debugger
                         echo $tipo, $mail, $nAp, $pass1, $pass2, $imagen;
                         if(!isset($tipo)) echo "tipo ";
@@ -144,7 +145,7 @@
                         $imagen = "../images/anonimo.jpg";
                     }
                     $imagen_b64 = base64_encode(file_get_contents($imagen));
-                    $sql = "INSERT INTO usuarios(tipousu, email, nomap, pass, imagen) VALUES ('$tipo', '$mail', '$nAp', '$pass', '$imagen_b64');";
+                    $sql = "INSERT INTO usuarios(tipousu, email, nomap, pass, estado, imagen) VALUES ('$tipo', '$mail', '$nAp', '$pass', '$estado', '$imagen_b64');";
                     if (!mysqli_query($mysqli, $sql)) {
                         die("Fallo al insertar en la BD: " . mysqli_error($mysqli));
                         echo "<span><a href='javascript:history.back()'>Volver al formulario</a></span>";
