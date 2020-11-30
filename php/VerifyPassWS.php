@@ -9,12 +9,13 @@ $server->configureWSDL('ComprobarPass',$ns);
 $server->wsdl->schemaTargetNamespace=$ns;
 
 $server->register('ComprobarPass',
-array('x'=>'xsd:string','y'=>'xsd:int'),
+array('x'=>'xsd:string','y'=>'xsd:string'),
 array('z'=>'xsd:string'),
 $ns);
 
 function ComprobarPass ($x, $y){
-	if($y != 1010){
+    //$y='1010';
+	if($y != '1010'){
 		return 'SIN SERVICIO';
 	}else{
 		$pagina = file_get_contents('../txt/toppasswords.txt');
