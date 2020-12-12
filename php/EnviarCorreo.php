@@ -41,11 +41,11 @@ if (isset($_REQUEST['dirCorreo'])) {
 			</html>
 			";
 
-			// $headers = 'MIME-Version: 1.0' . "\r\n";
-			// $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			// $headers .= 'To: ' . $to . "\r\n";
-			// $headers .= 'From: Daniel <druskov001@ikasle.ehu.eus>' . "\r\n";
-			mail($to, $subject, $message);
+			$headers = 'MIME-Version: 1.0' . "\r\n";
+			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+			$headers .= 'To: ' . $to . "\r\n";
+			$headers .= 'From: Daniel <druskov001@ikasle.ehu.eus>' . "\r\n";
+			mail($to, $subject, $message, $headers);
 
 			echo "Succeed";
 		} else {
